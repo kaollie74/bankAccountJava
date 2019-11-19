@@ -1,0 +1,70 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - BankAccountApp",
+      "request": "launch",
+      "mainClass": "BankAccountApp"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - demo",
+      "request": "launch",
+      "mainClass": "demo"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - FibonnaciApp",
+      "request": "launch",
+      "mainClass": "FibonnaciApp"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Strings",
+      "request": "launch",
+      "mainClass": "Strings"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - String",
+      "request": "launch",
+      "mainClass": "String"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Cities",
+      "request": "launch",
+      "mainClass": "Cities"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - NumberCalc",
+      "request": "launch",
+      "mainClass": "NumberCalc"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Days",
+      "request": "launch",
+      "mainClass": "Days"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Weather",
+      "request": "launch",
+      "mainClass": "Weather"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - SalaryCalculator",
+      "request": "launch",
+      "mainClass": "SalaryCalculator"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - HelloWorld",
+      "request": "launch",
+      "mainClass": "HelloWorld"
+    }
+  ]
+}
