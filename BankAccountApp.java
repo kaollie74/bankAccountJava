@@ -3,8 +3,16 @@ public class BankAccountApp {
 
     // Creating a new bank account >>> think instantiate an object
     BankAccount account1 = new BankAccount();
+
+     
+    // OLD WAY of naming a variable >> account1.name = "Kyle";
+    // NEW WAY (ENCAPSUALTION) >> public API's
+    account1.setName("Kyle Olson");
+    System.out.println(account1.getName());
+    account1.setSsn(99999999);
+    System.out.println(account1.getSsn());
+
     account1.accountNumber = "123456";
-    account1.name = "Kyle";
     account1.balance = 100000;
 
     account1.deposit(1500);

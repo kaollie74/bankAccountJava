@@ -9,8 +9,8 @@ public class BankAccount {
   private static final String routingNumber = "12345";
 
   // instance variables
-  String name;
-  String ssn;
+  private String name;
+  private int ssn;
   String accountType;
   double balance = 0;
 
@@ -45,7 +45,25 @@ public class BankAccount {
     }
   }
 
-  // Define mehtods
+  // GETTERS & SETTERS
+  // ALLOW the user to define the name
+  public void setName(String name) {
+    this.name = "Mr. " + name; 
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setSsn(int ssn) {
+    this.ssn = ssn; 
+  }
+
+  public int getSsn() {
+    return ssn;
+  }
+
+  // DEFINE METHODS
   void deposit(double amount) {
 
     balance += amount;
