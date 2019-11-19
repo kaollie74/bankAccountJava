@@ -24,9 +24,12 @@ public class BankAccountApp {
     account1.deposit(2500);
     account1.withdraw(2500);
 
+    // Polymorphism through overriding
      System.out.println("To String: " + account1.toString());
 
+     // Polymorphism through overloading
     BankAccount account2 = new BankAccount("Checking Account");
+    account2.accountNumber = "01020304";
 
     BankAccount account3 = new BankAccount("Savings Account", 5000);
     // System.out.println("Routing number: " + account1.routingNumber);

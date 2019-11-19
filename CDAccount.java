@@ -1,6 +1,6 @@
 
 // this is a way to inherit a class
-public class CDAccount extends BankAccount {
+public class CDAccount extends BankAccount implements IRate {
 
   String interestRate;
 
