@@ -1,6 +1,5 @@
-import org.graalvm.compiler.nodes.debug.BlackholeNode;
 
-public class BankAccount {
+public class BankAccount implements IRate {
 
   // define variables up top
   String accountNumber;
@@ -48,7 +47,7 @@ public class BankAccount {
   // GETTERS & SETTERS
   // ALLOW the user to define the name
   public void setName(String name) {
-    this.name = "Mr. " + name; 
+    this.name = "Mr. " + name;
   }
 
   public String getName() {
@@ -56,11 +55,20 @@ public class BankAccount {
   }
 
   public void setSsn(int ssn) {
-    this.ssn = ssn; 
+    this.ssn = ssn;
   }
 
   public int getSsn() {
     return ssn;
+  }
+
+  // INTERFACE METHODS
+  public void setRate() {
+    System.out.println("Setting rate");
+  }
+
+  public void increaseRate() {
+    System.out.println("Increasing rate");
   }
 
   // DEFINE METHODS
@@ -72,12 +80,12 @@ public class BankAccount {
   } // END deposit()
 
   void withdraw(double amount) {
-    balance -= amount; 
+    balance -= amount;
     showActivity("WITHDRAW");
   }
 
   // Private : can only be called from within the class
-  private void showActivity (String activity) {
+  private void showActivity(String activity) {
 
     System.out.println("YOUR RECENT TRANSACTION: " + activity);
     System.out.println("Your new balance is: $" + balance);
@@ -94,6 +102,7 @@ public class BankAccount {
   @Override
   public String toString() {
 
-    return "[ NAME: " + name + ". ACCOUNT# " + accountNumber + " ROUTING # " + routingNumber + " BALANCE: $" + balance + " ]";
+    return "[ NAME: " + name + ". ACCOUNT# " + accountNumber + " ROUTING # " + routingNumber + " BALANCE: $" + balance
+        + " ]";
   }
 } // END BankAccount

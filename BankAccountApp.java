@@ -15,6 +15,10 @@ public class BankAccountApp {
     account1.accountNumber = "123456";
     account1.balance = 100000;
 
+    // interface methods >> idea like having a contract
+    account1.setRate();
+    account1.increaseRate();
+
     account1.deposit(1500);
     account1.deposit(1500);
     account1.deposit(2500);
@@ -22,9 +26,9 @@ public class BankAccountApp {
 
      System.out.println("To String: " + account1.toString());
 
-    // BankAccount account2 = new BankAccount("Checking Account");
+    BankAccount account2 = new BankAccount("Checking Account");
 
-    // BankAccount account3 = new BankAccount("Savings Account", 5000);
+    BankAccount account3 = new BankAccount("Savings Account", 5000);
     // System.out.println("Routing number: " + account1.routingNumber);
    
     // account3.checkBalance();
