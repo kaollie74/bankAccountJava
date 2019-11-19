@@ -2,12 +2,15 @@
 public class BankAccountApp2 {
 
    public static void main(String[] args) {
-    BankAccount2 account1 = new BankAccount2("123456789");
-    BankAccount2 account2 = new BankAccount2("123456789");
-    BankAccount2 account3BankAccount2 = new BankAccount2("123456789");
+    BankAccount2 account1 = new BankAccount2("123456789", 1000);
+    BankAccount2 account2 = new BankAccount2("123456789", 2500);
+    BankAccount2 account3BankAccount2 = new BankAccount2("123456789", 2500);
 
     account1.setName("Kyle Allen Olson");
     System.out.println("On line 10" + account1.getName());
+    account1.makeDeposit(100);
+    account1.makeDeposit(255);
+    account1.payBill(180);
   }
 }
 
@@ -24,8 +27,9 @@ class BankAccount2 {
 
 
   //Constructors
-  public BankAccount2(String SSN) {
+  public BankAccount2(String SSN, double amount) {
     //System.out.println("New Account Created");
+    balance = amount; 
     this.SSN = SSN;
     System.out.println(SSN);
     ID++;
@@ -33,6 +37,7 @@ class BankAccount2 {
   }
 
   private void setAccountNumber() {
+
     int random = (int) (Math.random() * 100);
     accountNumber = ID + "" + random + SSN.substring(0,2); 
     System.out.println("Your account number: " + accountNumber);
@@ -44,5 +49,19 @@ class BankAccount2 {
 
   public String getName() {
     return name; 
+  }
+
+  public void payBill(double amount) {
+    balance -= amount;
+   showBalance();
+  }
+
+  public void makeDeposit(double amount) {
+    balance += amount; 
+   showBalance();
+  }
+
+  public void showBalance() {
+    System.out.println(balance);
   }
 }
