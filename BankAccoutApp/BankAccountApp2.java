@@ -43,6 +43,7 @@ class BankAccount2 implements IInterest {
     System.out.println("Your account number: " + accountNumber);
   }
 
+  // Name Setter
   public void setName(String name) {
     this.name = name;
   }
@@ -73,7 +74,8 @@ class BankAccount2 implements IInterest {
 
   @Override
   public String toString() {
+
     return "[ Name:" + name + "]\n [ Account Number: " + accountNumber + "]\n" + "[Routing Number: " + routingNumber
         + "]\n" + "[ Balance: " + balance + "]";
-  }
+  } //  
 }
